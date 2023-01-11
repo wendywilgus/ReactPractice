@@ -1,5 +1,4 @@
-import { render } from '@testing-library/react';
-import React, { Component } from 'react';
+import React from 'react';
 
 const TableHeader = () => {
     return (
@@ -20,6 +19,9 @@ const TableBody = (props) => {
             <tr key={index}>
                 <td>{row.name}</td>
                 <td>{row.job}</td>
+                <td>
+                    <button onClick={() => props.removeCharacter(index)}>Delete</button>
+                </td>
             </tr>
         )
     })
